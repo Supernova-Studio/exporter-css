@@ -1,0 +1,21 @@
+{
+    "id": "io.supernova.css",
+    "name": "CSS",
+    "description": "CSS token and style exporter",
+    "author": "Jiri Trecak",
+    "organization": "Supernova",
+    "homepage": "https://supernova.io",
+    "source_dir": "src",
+    "version": "1.0.0",
+    "config": {
+        "sources": "sources.json",
+        "output": "output.json"
+    },
+    "engines": {
+        "pulsar": "1.0.0",
+        "supernova": "1.0.0"
+    },
+    "tags": [
+        "Flutter"
+    ]
+}
