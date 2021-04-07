@@ -1,0 +1,22 @@
+{*
+
+Rendered to present Typography token as CSS string. 
+Note that this only converts the value, actual name is provided somewhere else
+
+
+Source data: Shadow Value (https://developers.supernova.io/design-system-data/tokens/texts)
+Note: Value is passed as `context` property because it is injected
+
+{
+  "value": {
+    "text": string
+    "referencedToken": Text | null
+  }
+}
+
+
+Rendered as:
+
+[text]
+
+*}

@@ -1,0 +1,18 @@
+{*
+
+Rendered to present Measure token as CSS string. 
+Note that this only converts the value, actual name is provided somewhere else
+
+
+Source data: Measure Value (https://developers.supernova.io/design-system-data/tokens/measures)
+Note: Value is passed as `context` property because it is injected
+
+{
+  "context": {
+    "unit": "Pixels" | "Points" | "Percent" | "Ems",
+    "measure": double
+    "referencedToken": Measure | null
+  }
+}
+
+*}

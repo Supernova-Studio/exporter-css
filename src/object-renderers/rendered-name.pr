@@ -1,0 +1,26 @@
+{*
+
+Rendered to convert name of the token to a CSS string. 
+Note that this only converts the name, actual value is provided somewhere else
+
+
+Source data: Any Token (https://developers.supernova.io/design-system-data/tokens)
+Note: Value is passed as `context` property because it is injected
+
+{
+  "context": {
+    "id": string
+    "name": string
+    "description": string
+    "tokenType": Depends on the token type, but we don't care about it here
+    "origin": ItemOrigin | null
+    "value": Depends on the token type, but we don't care about it here
+  }
+}
+
+
+Rendered as:
+
+[group1][group2][...][name];
+
+*}
