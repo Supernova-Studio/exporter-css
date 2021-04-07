@@ -44,3 +44,4 @@ Rendered as:
 {[/]}
 {[ let tokenName = @js.readableVariableName(context, tokenGroup, prefix) /]}
 {{ tokenName }}
+{[ let test = @init /]}

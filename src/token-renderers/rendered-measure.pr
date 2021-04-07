@@ -16,3 +16,4 @@ Note: Value is passed as `context` property because it is injected
 }
 
 *}
+Measure
