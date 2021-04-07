@@ -1,0 +1,30 @@
+/**
+* Convert group name, token name and possible prefix into camelCased string, joining everything together
+*/
+Pulsar.registerFunction("readableVariableName", function (token, tokenGroup, prefix) {
+
+    // Create array with all path segments and token name at the end
+    let segments = [...tokenGroup.path, token.name]
+    if (prefix && prefix.length > 0) {
+        segments.unshift(prefix)
+    }
+
+    // Create "sentence" separated by spaces so we can camelcase it all
+    let sentence = segments.join(" ")
+
+    // Return camelcased string from all segments
+    return sentence.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+})
+
+/**
+* Behavior configuration of the exporter
+* Prefixes: Add prefix for each category of the tokens. For example, all colors can start with "color, if needed"
+*/ 
+Pulsar.registerPayload("behavior", {
+    colorTokenPrefix: "color",
+    borderTokenPrefix: "border",
+    gradientTokenPrefix: "gradient",
+    measureTokenPrefix: "measure",
+    shadowTokenPrefix: "shadow",
+    typographyTokenPrefix: "typography"
+})

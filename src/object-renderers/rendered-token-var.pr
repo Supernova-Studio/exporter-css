@@ -22,3 +22,5 @@ Rendered as:
   --[name]: [value];
 
 *}
+{[ let token = context /]}
+{[ inject "rendered-name" context token /]}: "value";

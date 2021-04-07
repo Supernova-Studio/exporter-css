@@ -17,10 +17,6 @@
             "write_to": "measures.css"
         },
         {
-            "invoke": "radii.pr",
-            "write_to": "radii.css"
-        },
-        {
             "invoke": "shadows.pr",
             "write_to": "shadows.css"
         },

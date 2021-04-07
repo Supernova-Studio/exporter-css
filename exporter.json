@@ -9,7 +9,8 @@
     "version": "1.0.0",
     "config": {
         "sources": "sources.json",
-        "output": "output.json"
+        "output": "output.json",
+        "js": "src/js/helpers.js"
     },
     "engines": {
         "pulsar": "1.0.0",
