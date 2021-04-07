@@ -1,6 +1,6 @@
 {*
 
-Rendered to present Measure token as CSS string. 
+Injectable blueprint that represents Measure token as CSS string. 
 Note that this only converts the value, actual name is provided somewhere else
 
 

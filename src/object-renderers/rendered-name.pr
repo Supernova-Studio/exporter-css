@@ -1,6 +1,6 @@
 {*
 
-Rendered to convert name of the token to a CSS string. 
+Injectable blueprint that represents token name and groups as css-valid string. 
 Note that this only converts the name, actual value is provided somewhere else
 
 

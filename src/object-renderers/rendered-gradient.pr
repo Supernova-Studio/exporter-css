@@ -1,6 +1,6 @@
 {*
 
-Rendered to present Gradient token as CSS string. 
+Injectable blueprint that represents Gradient token as CSS string. 
 Note that this only converts the value, actual name is provided somewhere else
 
 

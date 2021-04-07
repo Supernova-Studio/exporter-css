@@ -1,7 +1,7 @@
 {*
 
-Generate all tokens as named variables.
+Generate all measure tokens as named variables.
 Tokens are named by their group path and then name, 
-and their value rendered using `rendered-color` blueprint
+and their value rendered using `rendered-measure` blueprint
 
 *}
