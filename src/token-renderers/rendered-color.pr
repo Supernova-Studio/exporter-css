@@ -22,8 +22,14 @@ Note: Value is passed as `context` property because it is injected
 
 Rendered as:
 
-#XXXXXX if it is fully opaque color
-rgba(r, g, b, a) if it is semi-transparent color
+#rrggbb if it is fully opaque color
+#rrggbbaa if it is semi-transparent color
 
 *}
-Color
+{[ inject "reference-wrapper" context context ]}
+{[ if @compare.lessThan(context.a, 255) ]}
+#{{ context.hex }}
+{[ else ]}
+#{{ context.hex.substring(0, 6) }}
+{[/]}
+{[/]}

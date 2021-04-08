@@ -1,6 +1,6 @@
 {*
 
-Injectable blueprint that represents full token as key: value to be used inside :root {} declarations.
+Injectable blueprint that represents full token as key: value to be used inside .class declarations.
 
 Source data: Token Metadata and Payload, all types (https://developers.supernova.io/design-system-data/tokens)
 Note: Token is passed as `context` property because it is injected
@@ -19,9 +19,14 @@ Note: Token is passed as `context` property because it is injected
 
 Rendered as:
 
-  --[name]: [value];
-
+  .[name]{
+    [value];
+  } 
+  
 *}
 {[ let token = context /]}
 {[ inject "rendered-description" context token /]}
---{[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]};
+.{[ inject "rendered-name" context token /]} {
+  {[ inject "rendered-value" context token /]}
+
+}

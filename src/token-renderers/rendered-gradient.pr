@@ -28,6 +28,26 @@ Note: Value is passed as `context` property because it is injected
 Rendered as:
 
 Xpx solid (rendered-color.pr);
+linear-gradient(
+  to bottom,
+    (rendered-color.pr) 0%,   
+    (rendered-color.pr) 49.4%,   
+    (rendered-color.pr) 100%  
+);    
 
 *}
-Gradient
+{[ inject "reference-wrapper" context context ]}
+{[ let gradientType = "linear-gradient" /]}
+{[ let gradientDirection = "to bottom" /]}
+{[ if @compare.equals(context.type, "Radial") ]}
+  {[ set "gradientType" = "radial-gradient" /]}
+  {[ set "gradientDirection" = "circle at center" /]}
+{[/]}
+{{ gradientType }}(
+  {{ gradientDirection }},
+  {[ for stop in context.stops ]}
+{[ inject "rendered-color" context stop.color /]} {{ stop.position.multipliedBy(100).rounded(1) }}%{[ if @boolean.not(#last) ]}, {[/]}
+  
+  {[/]}
+)
+{[/]}

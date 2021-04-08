@@ -23,6 +23,10 @@
         {
             "invoke": "typography.pr",
             "write_to": "typography.css"
+        },
+        {
+            "invoke": "index-file.pr",
+            "write_to": "index.css"
         }
     ]
 }

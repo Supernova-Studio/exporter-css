@@ -29,7 +29,19 @@ Once you have run the exporter against your design system, you can start using t
 [Todo description]
 
 ```
-[Code]
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Style import test</title>
+  <style>
+    @import ".build/index.css";
+  </style>
+ </head>
+ <body>
+  <p style="color: var(--colorContrast)">...</p>
+ </body>
+</html>
 ```
 
 
