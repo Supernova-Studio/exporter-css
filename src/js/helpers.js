@@ -5,7 +5,12 @@ Pulsar.registerFunction(
   "readableVariableName",
   function (token, tokenGroup, prefix) {
     // Create array with all path segments and token name at the end
-    let segments = [...tokenGroup.path, token.name];
+    const segments = [...tokenGroup.path];
+    if (!tokenGroup.isRoot) {
+      segments.push(tokenGroup.name)
+    }
+    segments.push(token.name);
+
     if (prefix && prefix.length > 0) {
       segments.unshift(prefix);
     }
@@ -14,12 +19,12 @@ Pulsar.registerFunction(
     let sentence = segments.join(" ");
 
     // Return camelcased string from all segments
-    sentence = sentence
+     sentence = sentence
       .toLowerCase()
       .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 
     if (/^\d/.test(sentence)) {
-      sentence = "_" + sentence;
+      sentence = '_' + sentence;
     }
     return sentence;
   }
