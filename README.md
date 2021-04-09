@@ -22,11 +22,7 @@ You can generate all production ready-code either manually using Supernova's [VS
 
 ## Example Usage
 
-Once you have run the exporter against your design system, you can start using the code in your codebase right away. Here are a few examples of how you can use the output of the CSS exporter:
-
-### [Example 1]
-
-[Todo description]
+Once you have run the exporter against your design system, you can start using the code in your codebase right away. To use the output of the exporter, simply add the stylesheets to your html page, like this:
 
 ```
 <!DOCTYPE html>
@@ -38,19 +34,13 @@ Once you have run the exporter against your design system, you can start using t
     @import ".build/index.css";
   </style>
  </head>
- <body>
-  <p style="color: var(--colorContrast)">...</p>
- </body>
 </html>
 ```
 
-
-### [Example 2]
-
-[Todo description]
+Because tokens are defined as css variables, you can use them as such, anywhere you need that value (even in order definitions):
 
 ```
-Code
+<p style="color: var(--colorContrast)">...</p>
 ```
 
 ## Installing
