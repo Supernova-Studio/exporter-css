@@ -18,14 +18,19 @@ Pulsar.registerFunction(
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
 
-    // Return camelcased string from all segments
+    // camelcase string from all segments
      sentence = sentence
       .toLowerCase()
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase())
+    
+    // only allow letters, digits, underscore and hyphen
+    sentence = sentence.replace(/[^a-zA-Z0-9_-]/g, '_')
 
+    // prepend underscore if it starts with digit 
     if (/^\d/.test(sentence)) {
       sentence = '_' + sentence;
     }
+
     return sentence;
   }
 );
