@@ -35,6 +35,26 @@ Pulsar.registerFunction(
   }
 );
 
+
+function findAliases(token, allTokens){
+  let aliases = allTokens.filter(t => t.value?.referencedToken?.id === token?.id)
+  for (const t of aliases) {
+    aliases = aliases.concat(findAliases(t, allTokens))
+  }
+  return aliases;
+}
+
+Pulsar.registerFunction("findAliases", findAliases)
+
+Pulsar.registerFunction("gradientAngle", function(from, to) {
+    var deltaY = (to.y - from.y);
+    var deltaX = (to.x - from.x);
+    var radians = Math.atan2(deltaY, deltaX); 
+    var result = radians * 180 / Math.PI; 
+    result = result + 90; 
+    return  ((result < 0) ? (360 + result) : result) % 360;
+})
+
 /**
  * Behavior configuration of the exporter
  * Prefixes: Add prefix for each category of the tokens. For example, all colors can start with "color, if needed"

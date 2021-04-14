@@ -24,9 +24,15 @@ Rendered as:
   } 
   
 *}
-{[ let token = context /]}
+{[ let token = context.token /]}
+
 {[ inject "rendered-description" context token /]}
-.{[ inject "rendered-name" context token /]} {
+.{[ inject "rendered-name" context token /]} 
+
+{[ for alias in @js.findAliases(context.token, context.allTokens) ]}
+, {[ inject "rendered-description" context alias /]}
+.{[ inject "rendered-name" context alias /]}
+{[/]} {
   {[ inject "rendered-value" context token /]}
 
 }

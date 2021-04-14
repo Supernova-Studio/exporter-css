@@ -38,7 +38,7 @@ linear-gradient(
 *}
 {[ inject "reference-wrapper" context context ]}
 {[ let gradientType = "linear-gradient" /]}
-{[ let gradientDirection = "to bottom" /]}
+{[ let gradientDirection = @js.gradientAngle(context.from, context.to).rounded(2).toString().suffixed("deg") /]}
 {[ if @compare.equals(context.type, "Radial") ]}
   {[ set "gradientType" = "radial-gradient" /]}
   {[ set "gradientDirection" = "circle at center" /]}
