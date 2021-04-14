@@ -37,7 +37,7 @@ Pulsar.registerFunction(
 
 
 function findAliases(token, allTokens){
-  let aliases = allTokens.filter(t => t.value?.referencedToken?.id === token?.id)
+  let aliases = allTokens.filter(t => t.value.referencedToken && t.value.referencedToken.id === token.id)
   for (const t of aliases) {
     aliases = aliases.concat(findAliases(t, allTokens))
   }
