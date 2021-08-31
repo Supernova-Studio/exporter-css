@@ -6,7 +6,7 @@ and their value rendered using `rendered-border` blueprint
 
 *}
 :root {
-{[ for token in @ds.tokensByType("Border") ]}
+{[ for token in ds.tokensByType("Border") ]}
     {[ inject "rendered-token-var" context token /]}
     
 
