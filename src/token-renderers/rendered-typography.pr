@@ -54,7 +54,7 @@ Rendered as:
 
 {[ let fontStyle = "normal" /]}
 {[ if ds.isFontItalic(context.font) ]}
-  {[ set fontStyle = "italic" /]}
+  {[ fontStyle = "italic" /]}
 {[/]}
 font-family: "{{ context.font.family }}";
 font-style: {{ fontStyle }};

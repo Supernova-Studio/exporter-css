@@ -20,7 +20,6 @@ Rendered as:
 
 /* description */
 *}
-{[ log context.description /]}
 {[ if (context.description && context.description.count() > 0) ]}
 /* {{ context.description.replacing("*/", "* /") }} */
 {[/]}

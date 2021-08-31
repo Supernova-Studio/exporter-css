@@ -40,8 +40,8 @@ linear-gradient(
 {[ let gradientType = "linear-gradient" /]}
 {[ let gradientDirection = gradientAngle(context.from, context.to).rounded(2).toString().suffixed("deg") /]}
 {[ if (context.type === "Radial") ]}
-  {[ set "gradientType" = "radial-gradient" /]}
-  {[ set "gradientDirection" = "circle at center" /]}
+  {[ "gradientType" = "radial-gradient" /]}
+  {[ "gradientDirection" = "circle at center" /]}
 {[/]}
 {{ gradientType }}(
   {{ gradientDirection }},
