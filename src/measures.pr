@@ -6,7 +6,7 @@ and their value rendered using `rendered-measure` blueprint
 
 *}
 :root {
-{[ for token in @ds.tokensByType("Measure") ]}
+{[ for token in ds.tokensByType("Measure") ]}
     {[ inject "rendered-token-var" context token /]}
     
 

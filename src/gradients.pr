@@ -6,7 +6,7 @@ and their value rendered using `gradient-color` blueprint
 
 *}
 :root {
-{[ for token in @ds.tokensByType("Gradient") ]}
+{[ for token in ds.tokensByType("Gradient") ]}
     {[ inject "rendered-token-var" context token /]}
     
 

@@ -20,11 +20,11 @@ Note: Value is passed as `context` property because it is injected
 {[ let unit = "px" /]}
 {[ switch context.unit ]}
 {[ case "Points"]}
-{[ set unit = "pt"/]}
+{[ unit = "pt"/]}
 {[ case "Percent"]}
-{[ set unit = "%"/]}
+{[ unit = "%"/]}
 {[ case "Ems"]}
-{[ set unit = "em"/]}
+{[ unit = "em"/]}
 {[/]}
 {{ context.measure }}{{ unit }}
 {[/]}
