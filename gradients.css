@@ -1,0 +1,9 @@
+
+:root {
+    --gradientTestgradient: radial-gradient(
+          circle at center,
+          #c95050 0%,   
+          #f6ff0000 99.2%  
+        )
+        ;    
+}
