@@ -73,12 +73,10 @@ Pulsar.registerPayload("behavior", {
 /** Describe complex shadow token */
 Pulsar.registerFunction("shadowDescription", function (shadowToken) {
   
-  console.log(shadowToken.shadowLayers);
   let connectedShadow = shadowToken.shadowLayers?.reverse().map((shadow) => {
       return shadowTokenValue(shadow)
   })
   .join(", ")
-  console.log(connectedShadow)
 
   return connectedShadow
 })
