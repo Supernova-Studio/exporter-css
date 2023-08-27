@@ -1,25 +1,21 @@
 {
-    "id": "io.supernova.css",
-    "name": "CSS",
-    "description": "CSS token and style exporter",
-    "author": "Ivan Terpugov & Jiri Trecak",
-    "organization": "Supernova",
-    "homepage": "https://supernova.io",
-    "source_dir": "src",
-    "version": "1.3.0",
-    "usesBrands": true,
-    "config": {
-        "sources": "sources.json",
-        "output": "output.json",
-        "js": "src/js/helpers.js"
-    },
-    "engines": {
-        "pulsar": "1.0.0",
-        "supernova": "1.0.0"
-    },
-    "tags": [
-        "CSS",
-        "Tokens",
-        "Styles"
-    ]
+  "id": "io.supernova.css",
+  "name": "CSS",
+  "description": "CSS token and style exporter",
+  "author": "Ivan Terpugov & Jiri Trecak",
+  "organization": "Supernova",
+  "homepage": "https://supernova.io",
+  "source_dir": "src",
+  "version": "1.3.1",
+  "usesBrands": true,
+  "config": {
+    "sources": "sources.json",
+    "output": "output.json",
+    "js": "src/js/helpers.js"
+  },
+  "engines": {
+    "pulsar": "1.0.0",
+    "supernova": "1.0.0"
+  },
+  "tags": ["CSS", "Tokens", "Styles"]
 }
