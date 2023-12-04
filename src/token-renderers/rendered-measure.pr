@@ -9,7 +9,7 @@ Note: Value is passed as `context` property because it is injected
 
 {
   "context": {
-    "unit": "Pixels" | "Points" | "Percent" | "Ems",
+    "unit": "Pixels" | "Percent" | "Rem" | "Ms" | "Raw" | "Points" | "Percent" | "Ems",
     "measure": double
     "referencedToken": Measure | null
   }
@@ -19,12 +19,20 @@ Note: Value is passed as `context` property because it is injected
 {[ inject "reference-wrapper" context context ]}
 {[ let unit = "px" /]}
 {[ switch context.unit ]}
-{[ case "Points"]}
-{[ unit = "pt"/]}
-{[ case "Percent"]}
-{[ unit = "%"/]}
-{[ case "Ems"]}
-{[ unit = "em"/]}
+    {[ case "Pixels"]}
+        {[ unit = "px"/]}
+    {[ case "Percent"]}
+        {[ unit = "%"/]}
+    {[ case "Rem"]}
+        {[ unit = "rem"/]}
+    {[ case "Ms"]}
+        {[ unit = "ms"/]}
+    {[ case "Raw"]}
+        {[ unit = ""/]}
+    {[ case "Points"]}
+        {[ unit = "pt"/]}
+    {[ case "Ems"]}
+        {[ unit = "em"/]}
 {[/]}
 {{ context.measure }}{{ unit }}
 {[/]}

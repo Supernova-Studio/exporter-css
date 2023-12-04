@@ -26,13 +26,16 @@ Rendered as:
 *}
 {[ let token = context.token /]}
 
+
+
 {[ inject "rendered-description" context token /]}
 .{[ inject "rendered-name" context token /]} 
 
 {[ for alias in (findAliases(context.token, context.allTokens)) ]}
-, {[ inject "rendered-description" context alias /]}
-.{[ inject "rendered-name" context alias /]}
-{[/]} {
-  {[ inject "rendered-value" context token /]}
+, .{[ inject "rendered-name" context alias /]} {[ inject "rendered-description" context alias /]}
 
+
+{[/]}
+{
+  {[ inject "rendered-value" context token /]}
 }

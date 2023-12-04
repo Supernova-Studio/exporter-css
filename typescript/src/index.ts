@@ -122,12 +122,18 @@ function nonNegativeValue(num) {
 /** Convert type to CSS unit */
 function measureTypeIntoReadableUnit(type) {
   switch (type) {
-    case "Points":
-      return "pt";
     case "Pixels":
       return "px";
     case "Percent":
       return "%";
+    case "Rem":
+      return "rem";
+    case "Ms":
+      return "ms";
+    case "Raw":
+      return "";
+    case "Points":
+      return "pt";
     case "Ems":
       return "em";
   }

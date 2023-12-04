@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "watch": "npx webpack --mode=production --watch",
-        "watch:dev": "npx webpack --mode=development --watch"
+        "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
+        "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production --watch",
+        "watch:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=development --watch"
     },
     "author": "Supernova.io",
     "license": "MIT",
